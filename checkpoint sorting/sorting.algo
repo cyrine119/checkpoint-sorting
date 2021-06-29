@@ -1,0 +1,16 @@
+PROCEDURE InsertionSort(VAR T : ARRAY, n : INTEGER)
+VAR
+    i,j,value : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 STEP 1 DO 
+      
+       value := T[i];
+       j := i;
+      WHILE ((j>0) AND (T[j-1]>value)) DO
+          T[j] := T[j-1];
+          j := j-1;
+      END_WHILE
+      T[j] := value;
+    END_FOR
+       
+END
